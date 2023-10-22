@@ -3,13 +3,13 @@ console.log("----------------");
 console.log("Total Months: " + finances.length); // Log length of finances Array in index.js
 
 
-let total = 0;
+let total_amount_of_money = 0;
 
 for (let i=0; i < finances.length; i++) {
-    total = total + finances[i][1];
+    total_amount_of_money = total_amount_of_money + finances[i][1];
 }
 
-console.log("Total: $" + total);
+console.log("Total: $" + total_amount_of_money);
 
 
 let arrayOfMoney = [];
@@ -35,6 +35,7 @@ let greatest_decrease = 0;
 let month_of_greatest_increase;
 let month_of_greatest_decrease;
 
+// Find the month with the greatest increase and decrease in profits/losses
 for (let i=0; i < finances.length - 1; i++) {
     if (finances[i+1][1] - finances[i][1] > greatest_increase) {
         greatest_increase = finances[i+1][1] - finances[i][1];
